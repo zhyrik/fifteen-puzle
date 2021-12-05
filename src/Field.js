@@ -2,6 +2,7 @@ import React, {useState, useEffect } from 'react'
 
 import './Field.css'
 import { initArray, changeFlags, mixFields, checkResult } from './FieldLogick'
+import Puzle from './Puzle'
 
 export default function Ev() {
     const [field, setField] = useState(initArray())
@@ -18,23 +19,13 @@ export default function Ev() {
         setRemember(r)
         e.target.style.background = '#005f73'
     }
-    function dragLiveHandler(e) {
-        e.target.style.background = 'white'
-    }
-    function dragEndHandler(e) {
-         e.target.style.background = '#94d2bd'
-    }
-    function dragOverhandler(e) {
+    function dropHandler(e) {
         e.preventDefault()
-        e.target.style.background = '#ee9b00'
-    }
-    function dropHandler(e, n) {
-        e.preventDefault()
-        setField(state => muveBlock(state))
+        setField(state => handleMuvebleFlag(state))
         setField(state => changeFlags(state))
     }
-    // main logick
-    const muveBlock = state => (state.map((item) => {
+    
+    const handleMuvebleFlag = state => (state.map((item) => {
         if (item.num === 16) {
             return remember
         } else if (item.num === remember.num) {
@@ -64,42 +55,10 @@ export default function Ev() {
     <div className="wrapper">
         <div className="button-wrapper"> 
             <button onClick={handleStart}>restart</button>
-            {console.log("div")}
         </div>
         <div className="fields">
            {field.map((item) => (
-               <>
-               
-               {item.num === 16 ? 
-               <div 
-                    className="field-item"
-                    key={item.num}
-                    onDrop={e=> dropHandler(e, item.num)}
-                    onDragOver={e => dragOverhandler(e)}
-                    onDragLeave={e => dragLiveHandler(e)}
-               >
-                   {item.num < 16 ? <div 
-                                        className="item"
-                                        draggable={item.muveble}
-                                        onDragStart={e => dragStartHandler(e, item)}
-                                        onDragEnd={e => dragEndHandler(e)}
-                                        style={item.muveble ? {background: '#94d2bd', cursor: 'pointer'} : {background: '#0a9396'}}
-                                    >{item.num}</div> : null }
-               </div> :
-               <div 
-                    className="field-item"
-                    key={item.num}
-                >
-                    {item.num < 16 ? <div 
-                                        className="item"
-                                        draggable={item.muveble}
-                                        onDragStart={e => dragStartHandler(e, item)}
-                                        onDragEnd={e => dragEndHandler(e)}
-                                        style={item.muveble ? {background: '#94d2bd', cursor: 'pointer'} : {background: '#0a9396'}}
-                                    >{item.num}</div> : null }
-                </div> 
-                }
-                </>
+               <Puzle item={item} dropHandler={dropHandler} dragStartHandler={dragStartHandler}/>
            ))} 
         </div>
         <div>{
