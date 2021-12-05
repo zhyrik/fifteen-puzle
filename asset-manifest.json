@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/fifteen-puzle/static/css/main.5d710986.chunk.css",
-    "main.js": "/fifteen-puzle/static/js/main.233b3562.chunk.js",
-    "main.js.map": "/fifteen-puzle/static/js/main.233b3562.chunk.js.map",
+    "main.js": "/fifteen-puzle/static/js/main.bd36c226.chunk.js",
+    "main.js.map": "/fifteen-puzle/static/js/main.bd36c226.chunk.js.map",
     "runtime-main.js": "/fifteen-puzle/static/js/runtime-main.f0b87a2a.js",
     "runtime-main.js.map": "/fifteen-puzle/static/js/runtime-main.f0b87a2a.js.map",
-    "static/js/2.d1281b37.chunk.js": "/fifteen-puzle/static/js/2.d1281b37.chunk.js",
-    "static/js/2.d1281b37.chunk.js.map": "/fifteen-puzle/static/js/2.d1281b37.chunk.js.map",
+    "static/js/2.98f69e93.chunk.js": "/fifteen-puzle/static/js/2.98f69e93.chunk.js",
+    "static/js/2.98f69e93.chunk.js.map": "/fifteen-puzle/static/js/2.98f69e93.chunk.js.map",
     "index.html": "/fifteen-puzle/index.html",
     "static/css/main.5d710986.chunk.css.map": "/fifteen-puzle/static/css/main.5d710986.chunk.css.map",
-    "static/js/2.d1281b37.chunk.js.LICENSE.txt": "/fifteen-puzle/static/js/2.d1281b37.chunk.js.LICENSE.txt"
+    "static/js/2.98f69e93.chunk.js.LICENSE.txt": "/fifteen-puzle/static/js/2.98f69e93.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f0b87a2a.js",
-    "static/js/2.d1281b37.chunk.js",
+    "static/js/2.98f69e93.chunk.js",
     "static/css/main.5d710986.chunk.css",
-    "static/js/main.233b3562.chunk.js"
+    "static/js/main.bd36c226.chunk.js"
   ]
 }
